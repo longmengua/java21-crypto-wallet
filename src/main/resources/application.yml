@@ -15,24 +15,30 @@ spring:
     show-sql: true
 
 chains:
-  - name: ETH
-    wsUrl: wss://mainnet.infura.io/ws/v3/a45d9c7b5a624517ad605b7b548e005e
-    httpUrl: https://mainnet.infura.io/v3/a45d9c7b5a624517ad605b7b548e005e
+  - name: BSC-Testnet
+    wsUrl: wss://bnb-testnet.api.onfinality.io/public-ws
+    httpUrl: https://bnb-testnet.api.onfinality.io/public
     requiredConfirmations: 12
     monitor:
-      - walletAddress: "0x0000000000000000000000000000000000000000" # ?????????????????/0x ???
-        tokenAddress: null # null ??????????? ERC20??? token contract address
+      - walletAddress: "0x0000000000000000000000000000000000000000"   # ??????????
+        tokenAddress: null                                           # null = ????BNB?
         tokenDecimals: 18
-
-  - name: BSC
-    wsUrl: wss://bsc-mainnet.infura.io/ws/v3/a45d9c7b5a624517ad605b7b548e005e
-    httpUrl: https://bsc-mainnet.infura.io/v3/a45d9c7b5a624517ad605b7b548e005e
-    requiredConfirmations: 15
-    monitor:
-      - walletAddress: "0x0000000000000000000000000000000000000000" # ?????????????????/0x ???
-        tokenAddress: null # null ??????????? ERC20??? token contract address
-        tokenDecimals: 18
-
-      - walletAddress: "0x0000000000000000000000000000000000000000" # ?????????????????/0x ???
-        tokenAddress: null # null ??????????? ERC20??? token contract address
-        tokenDecimals: 18
+#  - name: ETH
+#    wsUrl: wss://mainnet.infura.io/ws/v3/a45d9c7b5a624517ad605b7b548e005e
+#    httpUrl: https://mainnet.infura.io/v3/a45d9c7b5a624517ad605b7b548e005e
+#    requiredConfirmations: 12
+#    monitor:
+#      - walletAddress: "0x0000000000000000000000000000000000000000" # ?????????????????/0x ???
+#        tokenAddress: null # null ??????????? ERC20??? token contract address
+#        tokenDecimals: 18
+#  - name: BSC
+#    wsUrl: wss://bsc-mainnet.infura.io/ws/v3/a45d9c7b5a624517ad605b7b548e005e
+#    httpUrl: https://bsc-mainnet.infura.io/v3/a45d9c7b5a624517ad605b7b548e005e
+#    requiredConfirmations: 15
+#    monitor:
+#      - walletAddress: "0x0000000000000000000000000000000000000000" # ?????????????????/0x ???
+#        tokenAddress: null # null ??????????? ERC20??? token contract address
+#        tokenDecimals: 18
+#      - walletAddress: "0x0000000000000000000000000000000000000000" # ?????????????????/0x ???
+#        tokenAddress: null # null ??????????? ERC20??? token contract address
+#        tokenDecimals: 18

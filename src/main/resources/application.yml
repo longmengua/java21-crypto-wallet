@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:h2:mem:depositdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+app:
+  chains:
+    - name: ETH
+      wsUrl: wss://mainnet.infura.io/ws/v3/a45d9c7b5a624517ad605b7b548e005e
+      httpUrl: https://mainnet.infura.io/v3/a45d9c7b5a624517ad605b7b548e005e
+      requiredConfirmations: 12
+    - name: BSC
+      wsUrl: wss://bsc-mainnet.infura.io/ws/v3/a45d9c7b5a624517ad605b7b548e005e
+      httpUrl: https://bsc-mainnet.infura.io/v3/a45d9c7b5a624517ad605b7b548e005e
+      requiredConfirmations: 15
+
+
+monitor:
+  # ?????????????????/0x ???
+  monitoredAddress: "0x0000000000000000000000000000000000000000"
+  # null ??????????? ERC20??? token contract address
+  tokenContract: null
+  tokenDecimals: 18
+

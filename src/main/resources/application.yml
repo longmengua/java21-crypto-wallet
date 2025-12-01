@@ -14,22 +14,25 @@ spring:
       ddl-auto: update
     show-sql: true
 
-app:
-  chains:
-    - name: ETH
-      wsUrl: wss://mainnet.infura.io/ws/v3/a45d9c7b5a624517ad605b7b548e005e
-      httpUrl: https://mainnet.infura.io/v3/a45d9c7b5a624517ad605b7b548e005e
-      requiredConfirmations: 12
-    - name: BSC
-      wsUrl: wss://bsc-mainnet.infura.io/ws/v3/a45d9c7b5a624517ad605b7b548e005e
-      httpUrl: https://bsc-mainnet.infura.io/v3/a45d9c7b5a624517ad605b7b548e005e
-      requiredConfirmations: 15
+chains:
+  - name: ETH
+    wsUrl: wss://mainnet.infura.io/ws/v3/a45d9c7b5a624517ad605b7b548e005e
+    httpUrl: https://mainnet.infura.io/v3/a45d9c7b5a624517ad605b7b548e005e
+    requiredConfirmations: 12
+    monitor:
+      - walletAddress: "0x0000000000000000000000000000000000000000" # ?????????????????/0x ???
+        tokenAddress: null # null ??????????? ERC20??? token contract address
+        tokenDecimals: 18
 
+  - name: BSC
+    wsUrl: wss://bsc-mainnet.infura.io/ws/v3/a45d9c7b5a624517ad605b7b548e005e
+    httpUrl: https://bsc-mainnet.infura.io/v3/a45d9c7b5a624517ad605b7b548e005e
+    requiredConfirmations: 15
+    monitor:
+      - walletAddress: "0x0000000000000000000000000000000000000000" # ?????????????????/0x ???
+        tokenAddress: null # null ??????????? ERC20??? token contract address
+        tokenDecimals: 18
 
-monitor:
-  # ?????????????????/0x ???
-  monitoredAddress: "0x0000000000000000000000000000000000000000"
-  # null ??????????? ERC20??? token contract address
-  tokenContract: null
-  tokenDecimals: 18
-
+      - walletAddress: "0x0000000000000000000000000000000000000000" # ?????????????????/0x ???
+        tokenAddress: null # null ??????????? ERC20??? token contract address
+        tokenDecimals: 18
